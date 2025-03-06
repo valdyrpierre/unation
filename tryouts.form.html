@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csssheet.css">
+    <title>Tryout Form</title>
+</head>
+<body>
+    <form action="tryout" method="post" enctype="multipart/form-data">
+        <h2>Tryout Application</h2>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="first_name" required><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="last_name" required><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br>
+        </fieldset>
+
+        <button type="button" class="collapsible" aria-expanded="false" aria-controls="positionContent">What position(s) do you play?</button>
+        <div class="content" id="positionContent">
+            <input type="checkbox" id="left-back" name="position[]" value="left-back">
+            <label for="left-back">left-back</label><br>
+            <input type="checkbox" id="right-back" name="position[]" value="right-back">
+            <label for="right-back">right-back</label><br>
+            <input type="checkbox" id="center-back" name="position[]" value="center-back">
+            <label for="center-back">center-back</label><br>
+            <input type="checkbox" id="center-mid" name="position[]" value="center-mid">
+            <label for="center-mid">center-mid</label><br>
+            <input type="checkbox" id="defensive-mid" name="position[]" value="defensive-mid">
+            <label for="defensive-mid">defensive-mid</label><br>
+            <input type="checkbox" id="attacking-mid" name="position[]" value="attacking-mid">
+            <label for="attacking-mid">attacking-mid</label><br>
+            <input type="checkbox" id="left-wing" name="position[]" value="left-wing">
+            <label for="left-wing">left-wing</label><br>
+            <input type="checkbox" id="right-wing" name="position[]" value="right-wing">
+            <label for="right-wing">right-wing</label><br>
+            <input type="checkbox" id="striker" name="position[]" value="striker">
+            <label for="striker">striker</label><br>
+            <input type="checkbox" id="goalkeeper" name="position[]" value="goalkeeper">
+            <label for="goalkeeper">Goalkeeper</label><br><br>
+        </div>
+
+        <p>Please upload screenshot after successfully making the payment.</p>
+        <a href="https://cash.app/$UnationsFc" target="_blank">Cash App</a>
+        <label for="payment-proof">Payment Proof:</label>
+        <input type="file" id="payment-proof" name="payment-proof" accept="image/*">
+
+        <label for="highlightVideo">Highlight Video:</label>
+        <input type="file" id="highlightVideo" name="highlight" accept="video/*"><br>
+
+        <label for="videoUrl">Highlight Video URL:</label>
+        <input type="text" id="videoUrl" name="videoUrl" placeholder="Paste video URL here"><br>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var p;
+
+        for (p = 0; p < coll.length; p++) {
+            coll[p].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    this.setAttribute("aria-expanded", "false");
+                } else {
+                    content.style.display = "block";
+                    this.setAttribute("aria-expanded", "true");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
