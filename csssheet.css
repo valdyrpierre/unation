@@ -1,78 +1,78 @@
 /* csssheet.css */
 
-/* Reset and Normalization */
+/* Reset and Normalization - Resets default browser styles */
 body, h1, h2, h3, p, ul, li, a, img, iframe {
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
-/* Variables (CSS Custom Properties) */
+/* Variables (CSS Custom Properties) - Define reusable values */
 :root {
-  --primary-color: #ff4500;
-  --secondary-color: #640f0f;
-  --light-color: #fff;
-  --dark-color: #333;
+  --primary-color: #ff4500; /* Orange */
+  --secondary-color: #640f0f; /* Dark red */
+  --light-color: #fff; /* White */
+  --dark-color: #333; /* Dark gray */
   --base-font-size: 16px;
 }
 
-/* Base Styles */
+/* Base Styles - General styles for common elements */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #000000;
-  color: var(--light-color);
+  background-color: #000000; /* Black background */
+  color: var(--light-color); /* White text color */
   font-size: var(--base-font-size);
   line-height: 1.6;
 }
 
-h1 {
+h1 { /* Style for main headings */
   font-size: 3rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-h2 {
+h2 { /* Style for subheadings */
   font-size: 2rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-a {
+a { /* Style for links */
   color: var(--light-color);
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
 }
 
-a:hover {
+a:hover { /* Style for links on hover */
   color: var(--primary-color);
   transform: scale(1.1);
   text-decoration: none;
 }
 
-img {
+img { /* General image styles */
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Layout and Structure */
-header {
-  background-image: url('unaton/teamphoto.jpg');
+/* Layout and Structure - Styles for specific sections */
+header { /* Header section styles */
+  background-image: url('teamphoto.jpeg'); /* Background image */
   background-size: cover;
   background-position: center;
   text-align: center;
   padding: 60px 20px;
 }
 
-header img {
+header img { /* Header image styles (logo) */
   width: 150px;
   border-radius: 50%;
   margin-bottom: 15px;
 }
 
-nav {
+nav { /* Navigation bar styles */
   background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
@@ -83,22 +83,22 @@ nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
+nav a { /* Navigation links styles */
   margin: 0 15px;
   font-weight: bold;
   font-size: 1rem;
 }
 
-main {
+main { /* Main content area styles */
   padding: 20px;
 }
 
-#highlights {
+#highlights { /* Styles for the highlights section */
   padding: 40px 20px;
   text-align: center;
 }
 
-#highlights iframe {
+#highlights iframe { /* Styles for embedded iframes (videos) */
   display: block;
   margin: 20px auto;
   width: 80%;
@@ -107,7 +107,7 @@ main {
   border: none;
 }
 
-footer {
+footer { /* Footer section styles */
   background-color: var(--secondary-color);
   color: var(--light-color);
   text-align: center;
@@ -115,12 +115,12 @@ footer {
   margin-top: 30px;
 }
 
-footer a {
+footer a { /* Footer links styles */
   color: var(--primary-color);
 }
 
-/* Animations and Transitions */
-@keyframes fadeIn {
+/* Animations and Transitions - Define animations */
+@keyframes fadeIn { /* Fade-in animation */
   from {
     opacity: 0;
   }
@@ -129,12 +129,12 @@ footer a {
   }
 }
 
-header h1, #highlights h2 {
+header h1, #highlights h2 { /* Apply fade-in animation to headings */
   animation: fadeIn 2s;
 }
 
-/* Responsive Design (Media Queries) */
-@media (max-width: 768px) {
+/* Responsive Design (Media Queries) - Adjust styles for different screen sizes */
+@media (max-width: 768px) { /* Styles for screens smaller than 768px */
   nav {
     flex-direction: column;
     align-items: center;
@@ -154,7 +154,7 @@ header h1, #highlights h2 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* Styles for screens smaller than 480px */
   h1 {
     font-size: 2.5rem;
   }
@@ -163,19 +163,20 @@ header h1, #highlights h2 {
   }
 }
 
-/* Form Styles */
+/* Form Styles - Styles for form elements */
 form {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  color: #000000;
+  color: #000000; /* Black text color for form elements */
 }
 
-label {
+label { /* Labels for form fields */
   display: block;
   margin-bottom: 5px;
+  color: var(--light-color); /* White label color */
 }
 
 input[type="text"],
@@ -183,21 +184,24 @@ input[type="email"],
 input[type="tel"],
 input[type="date"],
 input[type="file"] {
+  /* Styles for various input types */
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  color: black;
+  color: black; /* Black text color for input fields */
 }
 
 .buttons {
+  /* Container for form buttons */
   margin-top: 20px;
   text-align: center;
 }
 
 .buttons button {
+  /* General button styles */
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
@@ -208,13 +212,14 @@ input[type="file"] {
 }
 
 .buttons button[type="reset"] {
+  /* Style for the reset button */
   background-color: grey;
 }
 
-/* Collapsible Section Styles */
+/* Collapsible Section Styles - Styles for the collapsible section in the form */
 .collapsible {
-  background-color: #eee;
-  color: #444;
+  background-color: #000000;
+  color: var(--light-color); /* Use --light-color for better contrast */
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -226,17 +231,18 @@ input[type="file"] {
 
 .active,
 .collapsible:hover {
-  background-color: #ccc;
+  background-color: #000000;
 }
 
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #0f0f0f;
 }
 
 fieldset {
+  /* Styles for fieldsets (grouping form elements) */
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -244,13 +250,14 @@ fieldset {
 }
 
 legend {
+  /* Styles for legends (titles for fieldsets) */
   background-color: var(--secondary-color);
   color: var(--light-color);
   padding: 5px;
   border-radius: 5px;
 }
 
-/* Roster Page Styles */
+/* Roster Page Styles - Styles specific to the roster page */
 #roster {
   max-width: 800px;
   margin: 20px auto;
@@ -290,13 +297,12 @@ legend {
 
 .player:hover,
 .coach:hover {
-  background-color: #000000;
+  background-color: #f0f0f0; /* Lighter hover color */
 }
 
 .coach {
   /* Style the coach differently if needed */
-  background-color: #000000;
-  /* Example background color */
+  background-color: #222; /* Slightly lighter background */
 }
 
 .player-info,
@@ -340,4 +346,12 @@ legend {
   .coach img {
     margin: 10px 0 0;
   }
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus {
+  outline: 2px solid var(--primary-color); /* Add a focus outline */
 }
