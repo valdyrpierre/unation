@@ -3,89 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="csssheet.css">
-    <title>Tryout Form</title>
+    <title>Tryouts</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(tryoutbackground.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff; /* Adjust text color for better contrast */
+        }
+
+        main {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            min-height: 100vh;      /* Ensure main covers viewport height */
+        }
+
+        /* Tryout Form Styling */
+        #tryout-info {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background */
+        }
+
+        #tryout-info h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff4500; /* Use your primary color */
+        }
+
+        #tryout-info .cost {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #640f0f; /* Use your secondary color */
+        }
+
+        #tryout-info ol {
+            margin-left: 20px;
+        }
+
+        #tryout-info li {
+            margin-bottom: 10px;
+        }
+
+        /* Add more styling as needed */
+    </style>
 </head>
 <body>
-    <form action="tryout" method="post" enctype="multipart/form-data">
-        <h2>Tryout Application</h2>
+    <header>
+        <nav>
+            </nav>
+    </header>
 
-        <fieldset>
-            <legend>Personal Information</legend>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="first_name" required><br>
+    <main>
+        <section id="tryout-info">
+            <h1>Tryout Information</h1>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="last_name" required><br>
+            <p>
+                <strong>Tryout Cost:</strong> <span class="cost">$50</span>
+            </p>
 
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" required><br>
+            <p>
+                Tryouts are held on <strong>Tuesdays and Thursdays</strong> at <strong>9:00 PM Pacific Time</strong>.
+            </p>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <p>
+                <strong>Location:</strong> <a href="https://www.google.com/maps/place/400+Cedar+Hill+St,+Northborough,+MA+01532" target="_blank">400 Cedar Hill St, Northborough, MA 01532</a>
+            </p>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br>
-        </fieldset>
+            <h2>Registration Instructions</h2>
+            <ol>
+                <li>
+                    Make your payment via Cash App: <a href="https://cash.app/$UnationsFc" target="_blank">Cash App</a>
+                </li>
+                <li>
+                    Email us your payment proof and tryout information. In your email, please include:
+                    <ul>
+                        <li>Your payment screenshot</li>
+                        <li>The tryout day you will attend</li>
+                        <li>Your playing position</li>
+                    </ul>
+                    <a href="mailto:unationspro@gmail.com">Email us your tryout information</a>
+                </li>
+            </ol>
 
-        <button type="button" class="collapsible" aria-expanded="false" aria-controls="positionContent">What position(s) do you play?(click me)</button>
-        <div class="content" id="positionContent">
-            <input type="checkbox" id="left-back" name="position[]" value="left-back">
-            <label for="left-back">left-back</label><br>
-            <input type="checkbox" id="right-back" name="position[]" value="right-back">
-            <label for="right-back">right-back</label><br>
-            <input type="checkbox" id="center-back" name="position[]" value="center-back">
-            <label for="center-back">center-back</label><br>
-            <input type="checkbox" id="center-mid" name="position[]" value="center-mid">
-            <label for="center-mid">center-mid</label><br>
-            <input type="checkbox" id="defensive-mid" name="position[]" value="defensive-mid">
-            <label for="defensive-mid">defensive-mid</label><br>
-            <input type="checkbox" id="attacking-mid" name="position[]" value="attacking-mid">
-            <label for="attacking-mid">attacking-mid</label><br>
-            <input type="checkbox" id="left-wing" name="position[]" value="left-wing">
-            <label for="left-wing">left-wing</label><br>
-            <input type="checkbox" id="right-wing" name="position[]" value="right-wing">
-            <label for="right-wing">right-wing</label><br>
-            <input type="checkbox" id="striker" name="position[]" value="striker">
-            <label for="striker">striker</label><br>
-            <input type="checkbox" id="goalkeeper" name="position[]" value="goalkeeper">
-            <label for="goalkeeper">Goalkeeper</label><br><br>
-        </div>
+            <p>We will add you to the list of expected players upon receipt of your complete information.</p>
 
-        <p>Please upload screenshot after successfully making the payment.</p>
-        <a href="https://cash.app/$UnationsFc" target="_blank">Cash App</a>
-        <label for="payment-proof">Payment Proof:</label>
-        <input type="file" id="payment-proof" name="payment-proof" accept="image/*">
+            <p>
+                <strong>Contact:</strong> For questions, please contact us at <a href="mailto:info@example.com">info@example.com</a>
+            </p>
+        </section>
+    </main>
 
-        <label for="highlightVideo">Highlight Video:</label>
-        <input type="file" id="highlightVideo" name="highlight" accept="video/*"><br>
-
-        <label for="videoUrl">Highlight Video URL:</label>
-        <input type="text" id="videoUrl" name="videoUrl" placeholder="Paste video URL here"><br>
-
-        <div class="buttons">
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-        </div>
-    </form>
-
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var p;
-
-        for (p = 0; p < coll.length; p++) {
-            coll[p].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
-                    this.setAttribute("aria-expanded", "false");
-                } else {
-                    content.style.display = "block";
-                    this.setAttribute("aria-expanded", "true");
-                }
-            });
-        }
-    </script>
+    <footer>
+        <p>© UnationsFc</p>
+    </footer>
 </body>
 </html>
