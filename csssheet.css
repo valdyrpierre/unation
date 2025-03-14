@@ -53,7 +53,7 @@ img {
 
 /* Header */
 header {
-  background-image: url(header.jpg);
+  background-image: url('header.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -255,7 +255,6 @@ header h1, #highlights h2 {
 .coach:hover {
   background-color: #f0f0f0;
 }
-
 .coach {
   background-color: #222;
 }
@@ -312,7 +311,6 @@ input[type="file"]:focus {
   padding: 20px;
   background-color: #000000;
 }
-
 #about-us h2 {
   color: var(--primary-color);
 }
@@ -326,7 +324,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    color: var(--light-color);
+    color: var(--light-color); /* Added for text color */
 }
 
 th, td {
@@ -337,15 +335,15 @@ th, td {
 
 th {
     background-color: #f2f2f2;
-    color: #333;
+    color: #333; /* Darker text for better contrast on the header */
 }
 
 /* Responsive Table */
 @media screen and (max-width: 600px) {
     table {
         display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
     }
 }
 
@@ -403,6 +401,7 @@ th {
   background-color: #ff631a;
   transform: scale(1.05);
 }
+
 /* Responsive Adjustments */
 @media (max-width: 600px) {
   .teams {
@@ -418,7 +417,6 @@ th {
       max-width: 60px;
   }
 }
-
 /* Get Tickets Page Styles */
 #ticket-info {
   max-width: 600px;
@@ -458,7 +456,6 @@ th {
   margin-bottom: 10px;
 }
 
-/* Footer Styles */
 footer {
   text-align: center;
   margin-top: 30px;
@@ -466,4 +463,3 @@ footer {
   background-color: var(--secondary-color);
   color: var(--light-color);
 }
-
