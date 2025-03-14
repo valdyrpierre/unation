@@ -323,28 +323,147 @@ input[type="file"]:focus {
 
 /* Table Styles (for roster.html) */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  color: var(--light-color);
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: var(--light-color);
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 th {
-  background-color: #f2f2f2;
-  color: #333;
+    background-color: #f2f2f2;
+    color: #333;
 }
 
 /* Responsive Table */
 @media screen and (max-width: 600px) {
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* General Fixture Styles (for both D-1 and Premier) */
+.fixture {
+  border: 1px solid var(--primary-color);
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.team-logo {
+  max-width: 80px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.teams span {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.details {
+  text-align: center;
+}
+
+.details p {
+  margin: 8px 0;
+}
+
+.ticket-button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.ticket-button:hover {
+  background-color: #ff631a;
+  transform: scale(1.05);
+}
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .teams {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .teams span {
+      margin: 10px 0;
+  }
+
+  .team-logo {
+      max-width: 60px;
   }
 }
+
+/* Get Tickets Page Styles */
+#ticket-info {
+  max-width: 600px;
+  margin: 40px auto; /* Increased margin for better spacing */
+  padding: 30px; /* Increased padding */
+  border: 1px solid var(--primary-color);
+  border-radius: 10px; /* More rounded corners */
+  background-color: #222; /* Consistent background */
+  color: var(--light-color); /* Consistent text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
+  text-align: center; /* Center align the text */
+}
+
+#ticket-info h1 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Larger heading */
+}
+
+#ticket-info p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+#ticket-info a {
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: underline; /* Added underline */
+}
+
+#ticket-info ol {
+  list-style-position: inside; /* Improved list styling */
+  padding-left: 0; /* Reset default padding */
+}
+
+#ticket-info li {
+  margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+}
+
