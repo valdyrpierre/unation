@@ -1,69 +1,476 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Unation FC - UPSL</title>
-  <link rel="stylesheet" href="csssheet.css"> 
-</head>
+/* Variables */
+:root {
+  --primary-color: #ff4500;
+  --secondary-color: #640f0f;
+  --light-color: #fff;
+}
 
-<body>
-  <header>
-    <img src="blacklogo.jpeg" alt="Unation FC Logo">
-    <h1>Unation FC</h1>
-    <p>
-      Competing in the UPSL since 2000, Unation FC represents Worcester, MA with pride, excellence, and passion for the game. Join us in our journey to elevate soccer to new heights!
-    </p>
-  </header>
+/* Base Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(homepage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--light-color);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-  <nav>
-    <a href="https://vx-3.com/collections/unations-fc" target="_blank">Club Shop</a>
-    <a href="tryouts.form.html" target="_blank">Tryouts</a>
-    <a href="contact.html">Contact</a>
-    <a href="stafflogin.html" target="_blank">Staff</a>
+h1, h2 {
+  text-align: center;
+}
 
-    <div class="dropdown">
-      <button class="dropbtn">fixture</button>
-      <div class="dropdown-content">
-        <a href="d1fixture.html" target="_blank">D-1 scheudule</a>
-        <a href="premierfixture.html" target="_blank">Premier schedule</a>
-      </div>
-    </div>
-    
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-    <div class="dropdown">
-      <button class="dropbtn">Roster</button>
-      <div class="dropdown-content">
-        <a href="d1roster.html" target="_blank">D-1 Roster</a>
-        <a href="premier.html" target="_blank">Premier Roster</a>
-      </div>
-    </div>
-  </nav>
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
 
-  <section id="about-us">
-    <h2>About Unation FC</h2>
-    <p>
-      Unations FC, based in Worcester, MA, was founded in 2000 and became actively competitive in 2004. Since its inception, the club has established itself as a beacon of semi-professional soccer excellence, competing across multiple prestigious leagues and tournaments. With a robust structure comprising two teams, the D1 and premier teams, Unations FC offers a platform for aspiring players to showcase their skills and elevate their game to new heights.
-    </p>
-    <p>
-      The club's competitive journey spans prestigious competitions including the Twilight Summer League, Boston Soccer League (BSSL), American Soccer League (ASL), and currently the United Premier Soccer League (UPSL). A crowning achievement was participating in the US Open Cup, demonstrating our ability to compete at the highest levels of American soccer while helping elevate the standard of the sport in Worcester and beyond.
-    </p>
-    <p>
-      Within our framework, players have clear pathways to progress and excel. Those who demonstrate exceptional performance and commitment can advance from the D1 team to the premier team, where competition intensifies and stakes rise. This structure rewards talent while reinforcing our commitment to player development, making us a vital stepping stone for athletes pursuing professional soccer careers.
-    </p>
-    <p>
-      More than just a soccer team, Unations FC embodies two decades of growth, competition, and the relentless pursuit of excellence. Through our rich history, unwavering commitment to development, competitive success, and deep community engagement, we continue to leave an indelible mark on the soccer landscape, both locally and nationally, while nurturing the next generation of soccer talent.
-    </p>
-  </section>
+a {
+  color: var(--light-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
 
-  <section id="highlights">
-    <h2>Key Moments</h2>
-    <iframe src="https://www.youtube.com/embed/-GZHRG21Lcc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Video 1"></iframe>
-    <iframe src="https://www.youtube.com/embed/cEZGUrbo_P0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Video 2"></iframe>
-    <iframe src="https://www.youtube.com/embed/y7eTjUOKlRE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Video 3"></iframe>
-  </section>
+a:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+  text-decoration: none;
+}
 
-  <footer id="contact">
-    <p>Contact us at <a href="mailto:unationspro@gmail.com">unationspro@gmail.com</a> or call us at (774) 228-8352.</p>
-    <p> Unation FC | All Rights Reserved</p>
-  </footer>
-</body>
-</html>
+img {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Maintains aspect ratio */
+  display: block;
+  margin: 0 auto; /* Centers images */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Header */
+header {
+  background-image: url(header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+  height: 300px;
+  object-fit: cover;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+
+header h1 {
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  font-size: 2.5rem;
+}
+
+header img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+nav a, .dropdown {
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: var(--light-color);
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--light-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main */
+main {
+  padding: 20px;
+}
+
+/* Highlights */
+#highlights {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#highlights iframe {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  height: 400px;
+  border: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header h1, #highlights h2 {
+  animation: fadeIn 2s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  #highlights iframe {
+    width: 95%;
+    height: 300px;
+  }
+
+  header {
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Roster Page */
+#roster {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#roster h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+#roster .logo-container img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+#roster ul {
+  list-style: none;
+  padding: 0;
+}
+
+.player,
+.coach {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.player:hover,
+.coach:hover {
+  background-color: #f0f0f0;
+}
+.coach {
+  background-color: #222;
+}
+
+.player-info,
+.coach-info {
+  flex-grow: 1;
+}
+
+.player-info h3,
+.coach-info h3 {
+  margin: 0 0 5px;
+  color: var(--primary-color);
+}
+
+.player-info p,
+.coach-info p {
+  margin: 0;
+}
+
+.player img,
+.coach img {
+  width: 150px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .player,
+  .coach {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .player img,
+  .coach img {
+    margin: 10px 0 0;
+  }
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+/* About Us Section */
+#about-us {
+  margin: 20px;
+  padding: 20px;
+  background-color: #000000;
+}
+#about-us h2 {
+  color: var(--primary-color);
+}
+
+#about-us p {
+  color: var(--light-color);
+}
+
+/* Table Styles (for roster.html) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: var(--light-color); /* Added for text color */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333; /* Darker text for better contrast on the header */
+}
+
+/* Responsive Table */
+@media screen and (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+}
+
+/* General Fixture Styles (for both D-1 and Premier) */
+.fixture {
+  border: 1px solid var(--primary-color);
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.team-logo {
+  max-width: 80px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.teams span {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.details {
+  text-align: center;
+}
+
+.details p {
+  margin: 8px 0;
+}
+
+.ticket-button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.ticket-button:hover {
+  background-color: #ff631a;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .teams {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .teams span {
+      margin: 10px 0;
+  }
+
+  .team-logo {
+      max-width: 60px;
+  }
+}
+/* Get Tickets Page Styles */
+#ticket-info {
+  max-width: 600px;
+  margin: 40px auto; /* Increased margin for better spacing */
+  padding: 30px; /* Increased padding */
+  border: 1px solid var(--primary-color);
+  border-radius: 10px; /* More rounded corners */
+  background-color: #222; /* Consistent background */
+  color: var(--light-color); /* Consistent text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
+  text-align: center; /* Center align the text */
+}
+
+#ticket-info h1 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Larger heading */
+}
+
+#ticket-info p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+#ticket-info a {
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: underline; /* Added underline */
+}
+
+#ticket-info ol {
+  list-style-position: inside; /* Improved list styling */
+  padding-left: 0; /* Reset default padding */
+}
+
+#ticket-info li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+}
