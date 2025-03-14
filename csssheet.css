@@ -24,7 +24,7 @@ h1, h2 {
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -63,7 +63,8 @@ header {
   height: 300px;
   object-fit: cover;
 }
-header::before { 
+
+header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -82,8 +83,8 @@ header h1 {
 }
 
 header img {
-  width: 150px;
-  height: 190px;
+  max-width: 150px;
+  height: auto;
   border-radius: 50%;
   margin-bottom: 15px;
   position: relative;
@@ -129,7 +130,7 @@ nav a, .dropdown {
   position: absolute;
   background-color: var(--secondary-color);
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -187,4 +188,128 @@ header h1, #highlights h2 {
   animation: fadeIn 2s;
 }
 
-/* The rest of the content remains the same, only paths were removed */
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  #highlights iframe {
+    width: 95%;
+    height: 300px;
+  }
+
+  header {
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Roster Page */
+#roster {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#roster h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+#roster .logo-container img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+#roster ul {
+  list-style: none;
+  padding: 0;
+}
+
+.player,
+.coach {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.player:hover,
+.coach:hover {
+  background-color: #f0f0f0;
+}
+
+.coach {
+  background-color: #222;
+}
+
+.player-info,
+.coach-info {
+  flex-grow: 1;
+}
+
+.player-info h3,
+.coach-info h3 {
+  margin: 0 0 5px;
+  color: var(--primary-color);
+}
+
+.player-info p,
+.coach-info p {
+  margin: 0;
+}
+
+.player img,
+.coach img {
+  width: 150px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .player,
+  .coach {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .player img,
+  .coach img {
+    margin: 10px 0 0;
+  }
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+/* About Us Section */
+#about-us {
+  margin: 20px;
+  padding: 20px;
+  background-color: #000000;
+}
+
