@@ -46,14 +46,24 @@ a:hover {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Maintains aspect ratio */
   display: block;
+  margin: 0 auto; /* Centers images */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 /* Header */
 header {
-  background-image: url('header.jpg');
+  background-image: url(header.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -74,6 +84,7 @@ header::before {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
+
 
 header h1 {
   position: relative;
